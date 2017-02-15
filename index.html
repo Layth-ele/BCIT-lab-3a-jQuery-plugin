@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Plugins demo</title>
+	<link type="text/css" rel="stylesheet" href="./styles.css" />
+	<link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="./css/jquery-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="./css/jquery.filer.css" />
+	<link type="text/css" rel="stylesheet" id="jssDefault" href="./css/theme1.css" />
+	<link rel="stylesheet" type="text/css" href="./themes/tooltipster-sideTip-borderless.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/tooltipster.bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-te-1.4.0.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Directions: six different jQuery Plugin.</h1>
+	</header>
+	<div id="primary">
+		<section>
+			<h1>chose your favoraite stylesheet</h1>
+			<ul id="styleOptions" title="switch styling">
+				<li>
+					<a href="javascript: void(0)" data-theme="theme1">Default</a>
+				</li>
+				<li>
+					<a href="javascript: void(0)" data-theme="theme2">Darkness</a>
+				</li>
+				<li>
+					<a href="javascript: void(0)" data-theme="theme3">Colorful</a>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<!-- Accordion -->
+			<h2>Accordion</h2>
+			<div id="accordion">
+				<h3>JavaScript</h3>
+				<div class="subject">
+					<img src="images/js.jpeg" style="width:25%;" />
+					<p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content
+						production; the majority of websites employ it, and all modern Web browsers support it without the need for plug-ins. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented,[8] imperative,
+						and functional programming styles. It has an API for working with text, arrays, dates and regular expressions, but does not include any I/O, such as networking, storage, or graphics facilities, relying for these upon the host environment in which
+						it is embedded.</p>
+				</div>
+				<h3>Node.js</h3>
+				<div>
+					<img src="images/node.png" />
+					<p> Node.js is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of server tools and applications. Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers
+						can write new modules in JavaScript. The runtime environment interprets JavaScript using Google's V8 JavaScript engine.</p>
+				</div>
+				<h3>AngularJS </h3>
+				<div>
+					<img src="images/angular.png" style="width:50%;" />
+					<p> AngularJS (commonly referred to as "Angular" or "Angular.js") is a complete JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges
+						encountered in developing single-page applications. The JavaScript components complement Apache Cordova, the framework used for developing cross-platform mobile apps. It aims to simplify both the development and the testing of such applications
+						by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Datepicker -->
+		<section>
+			<h2>Datepicker</h2>
+			<div id="datepicker"></div>
+		</section>
+
+		<section>
+			<h2>Character counter Plugin (autogrow textarea)</h2>
+			<div class="chaCount">
+				<form id="enquiry">
+					<textarea cols="40" rows="5" name="message" id="message" placeholder="Add your comment to submit!" style="max-width:100%; max-height: 100%;"></textarea>
+					<input type="submit" value="Add Comment" style="float:right;">
+				</form>
+			</div>
+			<div class="upLoad">
+				<h2>Upload Plugin (3 Files maximum)</h2>
+				<form action="./php/upload.php" method="post" enctype="multipart/form-data">
+					<input type="file" name="files[]" id="filer_input" multiple="multiple">
+					<input type="submit" value="Submit" style="float:right;">
+				</form>
+			</div>
+			<div class="sortPgn">
+				<h2>Sortable Plugin</h2>
+				<ul id="sortable" style="max-width:60%;">
+					<li class="ui-state-default"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Item 1</li>
+					<li class="ui-state-default"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Item 2</li>
+					<li class="ui-state-default"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Item 3</li>
+					<li class="ui-state-default"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Item 4</li>
+					<li class="ui-state-default"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Item 5</li>
+				</ul>
+			</div>
+			<div class="txtEdetor">
+				<h2>Text Editor</h2>
+				<input class="status" type="submit" value="Toggle jQTE">
+				<textarea name="textarea" class="jqte-test"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">TEXTAREA</span></u></b></textarea>
+				<input type="submit" style="float:right;" value="send">
+			</div>
+		</section>
+		<section CLASS="toolTip">
+			<h2>Tooltip Plugin</h2>
+
+			<span> This Paragraph has a tooltip when you <span class="Chess" data-tooltip-content="#Chess_content" style="color:#bb2f2f;"> CLICK ON CHESS ! </span></span>
+			<div class="tooltip_templates">
+				<span id="Chess_content">
+          <img src="images/Chess.jpg" /> <p>Chess is a two-player strategy board game played on a chessboard, a checkered gameboard with 64 squares arranged in an eight-by-eight grid. Chess is played by millions of people worldwide, both amateurs and professionals.
+Each player begins the game with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. Each of the six piece types moves differently, with the most powerful being the queen and the least powerful the pawn. The objective is to 'checkmate' the opponent's king by placing it under an inescapable threat of capture. To this end, a player's pieces are used to attack and capture the opponent's pieces, while supporting their own. In addition to checkmate, the game can be won by voluntary resignation by the opponent, which typically occurs when too much material is lost, or if checkmate appears unavoidable. A game may also result in a draw in several ways.</p>
+      </span>
+			</div>
+
+			<span>This span has a tooltip when you <span class="math" data-tooltip-content="#math_content" style="color:#bb2f2f;"> HOVER OVER MATH ! </span></span>
+			<div class="tooltip_templates">
+				<span id="math_content">
+        <img src="images/Math.jpg" /> <p>Mathematics (from Greek μάθημα máthēma, “knowledge, study, learning”) is the study of topics such as quantity (numbers), structure, space, and change. There is a range of views among mathematicians and philosophers as to the exact scope and definition of mathematics.</p>
+		</span>
+			</div>
+
+			<span>This span has a tooltip when you <span class="Physics" data-tooltip-content="#Physics_content" style="color:#bb2f2f;"> HOVER OVER PHYSICS ! </span></span>
+			<div class="tooltip_templates">
+				<span id="Physics_content">
+      <img src="images/Physics.jpg" /> <p>Physics is one of the oldest academic disciplines, perhaps the oldest through its inclusion of astronomy.[9] Over the last two millennia, physics was a part of natural philosophy along with chemistry, biology, and certain branches of mathematics, but during the scientific revolution in the 17th century, the natural sciences emerged as unique research programs in their own right. Physics intersects with many interdisciplinary areas of research, such as biophysics and quantum chemistry, and the boundaries of physics are not rigidly defined. New ideas in physics often explain the fundamental mechanisms of other sciences[6] while opening new avenues of research in areas such as mathematics and philosophy.</p>
+	</span>
+
+			</div>
+			<span>This span has a tooltip when you <span class="Defendo" data-tooltip-content="#Defendo_content" style="color:#bb2f2f;"> HOVER OVER DEFENDO ! </span></span>
+			<div class="tooltip_templates">
+				<span id="Defendo_content">
+        <img src="images/Defendo.jpeg" /> <p>Defendo is a martial art and self defense system created in 1945 for law enforcement by Bill Underwood, a British-born Canadian. Underwood had created Combato in 1910, a "non-boxing or wrestling" unarmed combat system which he taught in Montreal, Quebec and Toronto, Ontario and Defendo grew out of this system.</p>
+    </span>
+			</div>
+
+			<span>This span has a tooltip when you <span class="Hockey" data-tooltip-content="#Hockey_content" style="color:#bb2f2f;"> CLICK ON HOCKEY ! </span></span>
+			<div class="tooltip_templates">
+				<span id="Hockey_content">
+        <img src="images/Hockey.jpeg" /> <p>Hockey is a family of sports in which two teams play against each other by trying to maneuver a ball or a puck into the opponent's goal using a hockey stick. In many areas, one sport (typically field hockey or ice hockey) is generally referred to simply as "hockey".</p>
+    </span>
+			</div>
+
+		</section>
+		<footer>
+			<p><i class="fa fa-copyright" aria-hidden="true" style="font-weight:bold; color:rgb(31, 159, 222);"></i> Layth Al-shblawi 2017 visit me at GitHub <a href="https://github.com/Layth-ele"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></p>
+		</footer>
+	</div>
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="./js/jQuery.style.switcher.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.filer.min.js"></script>
+	<script type="text/javascript" src="./js/tooltipster.bundle.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.corner.min.js"></script>
+	<script type="text/javascript" src="./js/autogrow.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-te-1.4.0.min.js"></script>
+
+</body>
+
+</html>
